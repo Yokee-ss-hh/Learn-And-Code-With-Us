@@ -272,3 +272,4 @@ d1 = "dog"
 copyofd1 = copy.deepcopy(d1)
 print(id(d1),id(copyofd1))
 print(copyofd1)
+# Due to string interning in both method 6 and 7 , copied strings have same id as original strings.
