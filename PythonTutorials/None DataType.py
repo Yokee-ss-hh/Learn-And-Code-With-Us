@@ -42,7 +42,7 @@ if(not None):
 if(None):
     print("This line never executes!")
 else:
-    print("Nothing prints now")
+    print("Something prints now")
 
 print("*************")
 # Boolean check to None,
