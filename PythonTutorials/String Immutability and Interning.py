@@ -218,3 +218,56 @@ Memory cost to maintain intern table, Time cost to call intern() method
 In multi threaded environments : The interned memory (table) is a global resource in a multi-threaded environment whose synchronization needs to be modified. 
                                  This check might only be needed when the interned table is accessed i.e. when a new string is created but it can be expensive.
 '''
+
+print("****************************************************************")
+print("***************************some more examples************************")
+
+price1 = "twenty rupees"
+price2 = "%s"%price1          # contents are not changing after evaluation, so no memory is created for price2
+print(id(price1),id(price2))
+
+company1 = "samsung"
+company2 = company1[::-1][::-1] # Contents are changed twice after slicing, so new memory space is created for company2.
+print(id(company1),id(company2))
+
+tea1 = "Bru"
+tea2 = str("Bru")         # evaluates at compile time and contents aren't changing . so same id for both strings
+print(id(tea1),id(tea2))
+
+print("************************************************************************")
+print("****************Copying strings***********************")
+# Method1:
+x1 = "temple"
+copyofx1 = x1[::]
+print(id(x1),id(copyofx1))    # Both have same id's
+print(copyofx1)
+# Method2:
+y1 = "Biryani"
+copyofy1 = str(y1)
+print(id(y1),id(copyofy1))    # Both have same id's
+print(copyofy1)
+# Method3:
+z1 = "Noise"
+copyofz1 = "%s"%z1
+print(id(z1),id(copyofz1))    # Both have same id's
+print(copyofz1)
+# Method4:
+a1 = "apple"
+copyofa1 = a1+""
+print(id(a1),id(copyofa1))   # Both have same id's
+print(copyofa1)
+# Method5:
+b1 = "google"
+copyofb1 = "".join(b1)     # evaluates at run time so both have different id's
+print(id(b1),id(copyofb1))
+print(copyofb1)
+# Method6:
+c1 = "cat"
+copyofc1 = copy.copy(c1)
+print(id(c1),id(copyofc1))  # Both have same id's
+print(copyofc1)
+# Method7:
+d1 = "dog"
+copyofd1 = copy.deepcopy(d1)
+print(id(d1),id(copyofd1))
+print(copyofd1)
