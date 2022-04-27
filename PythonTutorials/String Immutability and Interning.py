@@ -1,3 +1,5 @@
+import sys
+import copy
 '''
 1) int, float, strings and tuples are immutable in python
 2) Immutable means once the object is created, we cannot change it's content again
@@ -180,7 +182,6 @@ print("**************************************************")
 # -when compared to the string expressions that evaluated at compile time.
 # But, We can do explicit interning using sys module as,
 
-import sys
 
 burger1 = sys.intern("cheese_burger")
 burger_char = 'r'
