@@ -273,3 +273,16 @@ copyofd1 = copy.deepcopy(d1)
 print(id(d1),id(copyofd1))
 print(copyofd1)
 # Due to string interning in both method 6 and 7 , copied strings have same id as original strings.
+
+print("**********************************************")
+# Re-assigning values of initialized strings with another value,
+fav_company = "Google"
+print(id(fav_company))
+
+fav_company = "Clarivate"
+print(id(fav_company))
+
+# Explanation
+# First, python creates memory for "Google" and points it's memory address to fav_company variable
+# Later, after we re-assign fav_company variable with "Clarivate", python creates new memory address for
+# "Clarivate" and points the variable fav_company to new memory address.
