@@ -653,3 +653,15 @@ print('k'*10)
 print('m' in "xmas")
 print('good' in 'good bye')
 
+print("****************************************************************************************")
+# Joining iterbales using .join() method
+
+print("".join(['a','b','c']))
+print("".join(('a','b','c')))
+
+print("".join({'a':1,'b':2,'c':3}))
+
+# print("".join({'a':1,'b':2,'c':3}.values())) gets error as join() method expects string as input but we have values
+# as integers.change to the following below.
+print("".join({'a':'1','b':'2','c':'3'}.values()))
+print("".join({'a':1,'b':2,'c':3}.keys()))
