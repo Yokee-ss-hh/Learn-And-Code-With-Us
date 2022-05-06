@@ -319,3 +319,9 @@ print("*******************Operator Precendence and Associtivity*****************
 14) and, or, not          logical    opeartors (L-R) 
 '''
 
+print("****************************************************************")
+# A odd number with & operation returns 1
+# A even number with & operation returns 0
+
+print(4 & 1)  # 0100 & 0001 = 0000 ~ 0
+print(9 & 1)  # 1001 & 0001 = 0001 ~ 1
