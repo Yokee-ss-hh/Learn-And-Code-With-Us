@@ -153,3 +153,37 @@ print(original_list)
 # As deep copy recursively copies the elements of the original list into copied list, we don't have any-
 # -problem with mutable types.
 
+'''
+-------
+When you shallow copy arr1 (as shown below), you get arr2. arr1 and arr2 have DIFFERENT id but referencing the same
+child elements. aka. each child have the same id
+arr1 = [1,2,[3,4],5]
+arr2 = copy.copy(arr1)
+id(arr1) == id(arr2)        => FALSE
+arr1 == arr2                    => TRUE
+id(arr1[0]) == id(arr2[0])  => TRUE
+id(arr1[1]) == id(arr2[1])  => TRUE
+id(arr1[2]) == id(arr2[2])  => TRUE
+id(arr1[3]) == id(arr2[3])  => TRUE
+-----------------------------------------------------
+Let's modify one of the elements.
+arr1[0] = "a"
+when you now print arr1 and arr2 you'll get the result as shown below
+print(arr1[0])              => ['a', 2, [3, 4], 5]
+print(arr2[0])              => [1, 2, [3, 4], 5]
+The reason that the first element changed for arr1 but not for arr2 is because the first
+element `1` is an int which is immutable. Therefore, when you "modify" it from `1` to "a",
+you essentially create a new string object and now the first element of arr1 is pointing to
+that new object "a". But the first element of arr2 is still pointing at `1`.
+-----------------------------------------------------
+Let's now modify an element in the list
+arr1[2][0] = "b"
+when you now print arr1 and arr2 you'll get the result as shown below
+print(arr1[0])              => ['a', 2, ['b', 4], 5]
+print(arr2[0])              => [1, 2, ['b', 4], 5]
+This is what really tripped me first! But this is also due to mutability/immutability.
+Now (looking at the arr1 before modifying), arr1[2] is [3,4] which is a list, hence mutable.
+So, modifying that list won't create a new object like above. Therefore, modifying any element
+inside the list is being shown on both arr1 and arr2. 
+-----------------------------------------------------
+'''
