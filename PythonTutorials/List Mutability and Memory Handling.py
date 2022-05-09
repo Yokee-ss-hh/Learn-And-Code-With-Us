@@ -187,3 +187,21 @@ So, modifying that list won't create a new object like above. Therefore, modifyi
 inside the list is being shown on both arr1 and arr2. 
 -----------------------------------------------------
 '''
+
+# As we see above, 2 or more lists with same content in the same order of elements always-
+# - hold different memory locations.
+# From lines 67 to 88, we saw that even lists with immutable data types will be having different
+# memory locations, let us check with lists with mutable data types.
+
+s1 = [[1,2,3],[4,5,6]]
+s2 = [[1,2,3],[4,5,6]]
+
+print('Id of s1 : ',id(s1))
+print('Id of s2 : ',id(s2))
+
+print(s1 is s2)
+print(s1 == s2)
+
+# Finally, Lists with mutable/immutable data types of the same order will never go interning and
+# always have different memory locations.
+
