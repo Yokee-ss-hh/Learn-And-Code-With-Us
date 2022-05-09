@@ -168,14 +168,18 @@ oceans.append('atlantic')
 print("oceans list after appending single element atlantic is :",oceans)
 oceans.append(['arctic','arabic'])
 print("oceans list after adding some ocean names",oceans)
-
+seas = []
+seas.append(['bay of bengal'])
+print(seas)
 # TO add one list to another use extend() method
 print("**extend() examples**")
 name1 = ['yokesh','B']
 name2 = ['googler','google']
 name1.extend(name2)
 print(name1)
-
+his_name = []
+his_name.extend(['yokesh'])
+print(his_name)
 # Adding 2 lists to form another list using + operator
 my_hobbies = ['studying','gaming']
 my_another_hobbies = ['listening music']
