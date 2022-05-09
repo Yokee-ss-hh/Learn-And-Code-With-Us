@@ -1,11 +1,12 @@
 <h1 align="center">Hi 👋, I'm YOKESH</h1>
 <h3 align="center">A passionate Backend developer from India</h3>
-
+<h4 style="color:blue;"> Why this Repo?</h4>
+<h5 style="color:green;"> The main objective of this repo is to learn python by copying this code and paste in your IDE and learn from the outputs!</h5>
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=yokee-ss-hh&label=Profile%20views&color=0e75b6&style=flat" alt="yokee-ss-hh" /> </p>
 
 - 🔭 I’m currently working on **Python Projects**
 
-- 🌱 I’m currently learning **Django,Python 3.10**
+- 🌱 I’m currently learning **Django,Python 3.10,Kafka and Redis**
 
 - 💬 Ask me about **Django, Python**
 
@@ -13,7 +14,7 @@
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
-<a href="https://linkedin.com/in/yokesh chowdary" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="yokesh chowdary" height="30" width="40" /></a>
+<a href="https://linkedin.com/in/linkedin.com/in/yokesh-chowdary-1070491bb" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="linkedin.com/in/yokesh-chowdary-1070491bb" height="30" width="40" /></a>
 </p>
 
 <h3 align="left">Languages and Tools:</h3>
@@ -22,4 +23,5 @@
 <p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=yokee-ss-hh&show_icons=true&locale=en&layout=compact" alt="yokee-ss-hh" /></p>
 
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=yokee-ss-hh&show_icons=true&locale=en" alt="yokee-ss-hh" /></p>
+
 
