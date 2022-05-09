@@ -10,6 +10,17 @@ There are 3 sequence data types in python
 # While creating a tuple with one item, remember to include a comma at the last.
 # The comma tells python that this datatype is a tuple,
 # If we don't include comma, python treats it as un defined variable / un-initialized string.
+print("**tuples order check**")
+t3 = ('one','two')
+t4 = ('two','one')
+print(t3 == t4) # Returns False as tuples are ordered.
+print("***************************************")
+t1 = ('hi','hello',123)
+t2 = ('hi','hello',123)
+print(t1 == t2)
+print(t1 is t2)
+print(id(t1),id(t2))
+print("*****************************************")
 tup0 = (12,) # tup0 = ('hi',)
 
 tup1 = (12,'yoki',6+6j,2.2222)
