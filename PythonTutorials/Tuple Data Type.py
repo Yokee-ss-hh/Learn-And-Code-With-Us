@@ -10,6 +10,14 @@ There are 3 sequence data types in python
 # While creating a tuple with one item, remember to include a comma at the last.
 # The comma tells python that this datatype is a tuple,
 # If we don't include comma, python treats it as un defined variable / un-initialized string.
+print("**tuple()**")
+tuple_from_list = tuple([1,2,3,'list'])
+print(f"Tuple from the list : {tuple_from_list}")
+a = {'a':1,'b':2,'c':3}
+tuple_from_dict = tuple(a)
+print(f"Tuple from dictionary : {tuple_from_dict}")
+print(f"Tuple from dictionary Keys : {tuple(a.keys())}")
+print(f"Tuple from dictionary Values : {tuple(a.values())}")
 print("**tuples order check**")
 t3 = ('one','two')
 t4 = ('two','one')
