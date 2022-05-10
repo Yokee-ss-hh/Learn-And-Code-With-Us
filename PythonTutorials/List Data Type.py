@@ -15,7 +15,14 @@ print("***********************************************LISTS*********************
 '''
 # List has 4 properties.
 # Mutable, Indexed , Ordered , Allows duplicates and Changeable.
-
+print("****list()****")
+a = {'a':1,'b':2,'c':3}
+b = (1,2,3,'hello')
+print(f'List from tuple : {list(b)}')
+print(f'List from Dictionary : {list(a)}')
+print(f'List from Dictionary keys : {list(a.keys())}')
+print(f'List from Dictionary values : {list(a.values())}')
+print("****************************************************************")
 l1 = [1,2.43,3+9j,"hi"]
 print(type(l1))
 print(id(l1))
