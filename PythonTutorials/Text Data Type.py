@@ -255,7 +255,8 @@ case2: If start<stop and step=-1, then output is 0 , see line 241
 case3: If start>stop and step=1, then output is 0 , see line 246,247
 case4: If we specify the start=stop=0 then no output, see line 235
 '''
-print(some_quote[::])
+print(some_quote[::]) # slicing won't happen so it prints original string
+print(some_quote[::1]) # slicing won't happen so it prints original string
 print(some_quote[0:0:]) # By default step = 1, as we wrote stop=0 , iteration starts from start=0 to stop=0 , that means 
 # it prints nothing
 print(some_quote[0::]) # By default stop=last index of the string and step=1
