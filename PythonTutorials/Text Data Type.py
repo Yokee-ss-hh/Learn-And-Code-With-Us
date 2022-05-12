@@ -17,6 +17,13 @@ print("**********************************************************")
 # strings can be assigned to a variable using single / double quotes
 # Un initialized strings are ignored by python interpreter
 
+# multiple assignments to string,
+ab,bc,ca = 'YOK'
+print(ab)
+print(bc)
+print(ca)
+# As strings can be accessed using slicing as characters, so strings can be unpacked into variables.
+
 fname = 'yokesh'
 lname = "bollineni"
 place = '''He lives in pakala'''
