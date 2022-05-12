@@ -38,3 +38,25 @@ print(d3 == d1)
 
 print("********************************************************************************")
 
+print('****dict() aliasing and copying****')
+x0 = {'whole':'hole','holy':'moly'}
+x1 = x0
+
+# changes made t0 x0 will reflect in x1 due to aliasing,
+
+x0.update({'rat':'cat'})
+
+print(x0)
+print(x1)
+print(id(x0),id(x1)) # Both memory locations are same due to aliasing
+# Techniques to copy,
+
+x2 = dict(x0)
+
+print(id(x0), id(x2)) # Both memory locations are not same as we created new dictionary
+
+x3 = x0.copy()
+print(id(x0),id(x3))
+
+x4 = x0 | dict()
+print(id(x0), id(x4))
