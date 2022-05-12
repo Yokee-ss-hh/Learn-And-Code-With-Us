@@ -64,6 +64,11 @@ print(type(list_constructor2))
 print(type(list_constructor3))
 # Should give inner brackets [],() or {} to bind all elements together.
 
+# strings are splitted to individual elements while passed to a list() constructor.
+print(list('yokesh'))
+print(list(" "))
+
+
 print("*******************************************************")
 print("List Slicing using slice [start:stop:step]")
 list_slice = ['apple','banana',123,999,3+9.9j,True,2.222,'yokesh']
