@@ -304,4 +304,31 @@ print('age2 = ',age2)
 print(person2)
 
 print("**********************************************************************************")
+print('***Why dict() keys should not be of type mutable***')
+'''
+1) After dict() is initialized with some content, python takes each and every key from the dictionary-
+- and do hashing using hash() function.
+2) The outputs of the hash() functions is used to store the values associated with those keys in the memory.
+'''
+hashable_dict = { 'tall': 12, 'grande': 16, 'venti': 20 }
+print(hash('tall'))
+print(hash('grande'))
+print(hash('venti'))
 
+# hashed value of each and every key are different from each other.
+# Here all the keys are immutable data types, means these are not changeable.
+print(hashable_dict['grande'])
+# For the above line, python tells hash() function to do hashing for 'grande' key , hash() returns
+# hashed value i.e, -7287751947317497759. This hashed value is used to locate the value associated
+# with that key.
+# If suppose(lets assume) grande is mutable, if someone changes grande to grandin, and hashing grandin
+# using hash() function will not return -7287751947317497759, and we never know the value associated \
+# with the key.
+# That's why dict() keys should be immutable
+
+# example = {[1,2,3]:'one'}, printing this we will get TypeError: unhashable type: 'list'
+
+example = {(1,2,3):'tuple'}
+print(example)
+
+# This worked as (1,2,3) is immutable tuple data type.
