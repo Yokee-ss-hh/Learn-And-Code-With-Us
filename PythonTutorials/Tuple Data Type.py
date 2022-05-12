@@ -11,6 +11,9 @@ There are 3 sequence data types in python
 # The comma tells python that this datatype is a tuple,
 # If we don't include comma, python treats it as un defined variable / un-initialized string.
 print("**tuple()**")
+# passing string to tuple() will split each character into elements,
+print(tuple('Python'))
+print(tuple(' '))
 tuple_from_list = tuple([1,2,3,'list'])
 print(f"Tuple from the list : {tuple_from_list}")
 a = {'a':1,'b':2,'c':3}
