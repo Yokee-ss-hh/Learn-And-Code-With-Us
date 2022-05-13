@@ -332,3 +332,12 @@ example = {(1,2,3):'tuple'}
 print(example)
 
 # This worked as (1,2,3) is immutable tuple data type.
+
+print("******************************************************************************************")
+print(len({'one':1,'two':2,'three':3,'four':4}))
+print(max({'one':1,'two':2,'three':3,'four':4}))
+print(min({'one':1,'two':2,'three':3,'four':4}))
+# print(sum({'one':1,'two':2,'three':3,'four':4})) gives error as,
+# TypeError: unsupported operand type(s) for +: 'int' and 'str'
+
+print(sum(list({'one':1,'two':2,'three':3,'four':4}.values())))
