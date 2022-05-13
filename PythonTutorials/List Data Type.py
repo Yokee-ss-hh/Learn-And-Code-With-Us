@@ -206,6 +206,8 @@ laptops.remove(laptops[2])
 print('After Removing apple laptop from laptops :',laptops)
 laptops.remove('hp')
 print('After Removing hp laptop from laptops :',laptops)
+# raises value error if we specify the element that is not present in the list.
+# for ex : laptops.remove("yoki")
 
 # pop takes index of the list and removes element at that index.
 # If no index is given, then it removes the last item in the list.
@@ -214,6 +216,8 @@ games.pop(2)
 print(games)
 games.pop()
 print(games)
+# raises index error if the specified index is not present in the list
+# for ex : games.pop(10)
 
 # clear empties the list and the reference is there in the memory.
 clear_list = [1,2,3,'a','b','c']
