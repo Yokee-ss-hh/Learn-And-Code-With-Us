@@ -137,3 +137,8 @@ print("**************")
 For Updating and removing elements, use list() to convert tuple into list later use lists methods-
 - to make changes to that list converted tuple, save the changes and later convert again to tuple.
 '''
+print("***************************************************************************")
+print(sum((1,2,3,4,5,6,7)))
+print(max((3,4,22,11,44,99,9)))
+print(min((3,4,22,11,44,99,9)))
+print(len((3,4,22,11,44,99,9)))
