@@ -77,4 +77,46 @@ print('Conclusion : Tuples with both mutable and immutable datatypes will not un
 
 print("**************************************************************")
 
+print("***************************************************************************")
+print("**tuple copying techniques***")
+copy_tuple1 = (1,2,'tuple',('a','b'))  # tuple with immutable items
+copy_tuple2 = ([1,2],[3,4])            # tuple with mutable items
+copy_tuple3 = ((1,2),[3,4])            # tuple with both mutable and immutable items
 
+c1 = copy_tuple1
+c2 = copy_tuple2
+c3 = copy_tuple3
+
+print("aliasing of tuples")
+list(copy_tuple1).pop()
+list(copy_tuple2).pop()
+list(copy_tuple3).pop()
+
+print("copy_tuple1 and c1 after changes : ",copy_tuple1,c1)
+print("copy_tuple2 and c2 after changes : ",copy_tuple2,c2)
+print("copy_tuple3 and c3 after changes : ",copy_tuple2,c3)
+
+print("We can see aliasing on all 3 tuples and on their aliases!")
+
+c4 = tuple(list(copy_tuple1).copy())
+c5 = tuple(list(copy_tuple2).copy())
+c6 = tuple(list(copy_tuple3).copy())
+
+print(c4 is copy_tuple1)
+print(c5 is copy_tuple2)
+print(c6 is copy_tuple3)
+
+print("Copying 3 different tuples creates all 3 new tuples in memory")
+
+c7 = tuple(copy_tuple1)
+c8 = tuple(copy_tuple2)
+c9 = tuple(copy_tuple3)
+
+print(id(c7),id(copy_tuple1))
+print(c7 is copy_tuple1)
+print(id(c8),id(copy_tuple2))
+print(c8 is copy_tuple2)
+print(id(c9),id(copy_tuple3))
+print(c9 is copy_tuple3)
+
+print("No copying occurs when we try with tuple() constructor")
