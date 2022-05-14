@@ -300,4 +300,30 @@ pp_set = {1,2,3,4}
 pp_set.update({5,6,7,8,9})
 print(pp_set)
 
+print("***********************************************************************************************")
+print("*****Copying sets**********")
+copy_set = {1,3,5,('apple',),'yoki'}
 
+
+aliased_set = copy_set
+copy_set.pop()
+print(copy_set)
+print(aliased_set)
+print("changes made to copy_set is reflected in aliased_set")
+
+copied_set1 = copy_set.copy()
+print(id(copy_set))
+print(id(copied_set1))
+print("set copied via copy() method creates a new set at new memory location!")
+
+copied_set2 = set(copy_set)
+print(id(copy_set))
+print(id(copied_set2))
+print("set copied using set() constructor creates new set in memory")
+
+copied_set3 = {*copy_set}
+print(id(copy_set))
+print(id(copied_set3))
+print("set copied using unpacking original set into {} creates new set in the memory")
+
+print("************************************************************************************")
