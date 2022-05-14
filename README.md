@@ -1,6 +1,6 @@
 <h1 align="center">Hi 👋, I'm YOKESH</h1>
 <h3 align="center">A passionate Backend developer from India</h3>
-<h4 style="color:blue;"> Why this Repo?</h4>
+<h4 style="color:red;"> Why this Repo?</h4>
 <h5 style="color:green;"> The main objective of this repo is to learn python by copying this code and paste in your IDE and learn from the outputs!</h5>
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=yokee-ss-hh&label=Profile%20views&color=0e75b6&style=flat" alt="yokee-ss-hh" /> </p>
 
