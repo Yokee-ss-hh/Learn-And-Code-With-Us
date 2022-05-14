@@ -39,14 +39,18 @@ l4 = list(l3)
 print(id(l3), id(l4))
 print(id(l3) == id(l4))
 print(l3 == l4)
-
+print("Copying a list using list() creates new list in the memory")
+l44 = [*l3]
+print(id(l3), id(l44))
+print(l3 is l44)
+print(l3 == l44)
+print("copying a list into [] using unpacking operator creates new list in the memory  ")
 '''
 Note : Two Lists with same content in different order are not equal.
 '''
 l5 = [3+9j,'apple',12]
-
 print(l3 == l5)
-
+print("l3 == l5 returns False, as order of items matters in the List data type!")
 print("**copy and deepcopy**")
 l6 = ['prime',8.321]
 l7 = l6.copy()
