@@ -272,7 +272,9 @@ d1 = "dog"
 copyofd1 = copy.deepcopy(d1)
 print(id(d1),id(copyofd1))
 print(copyofd1)
-# Due to string interning in both method 6 and 7 , copied strings have same id as original strings.
+# Basically, as string is a immutable object, it's contents won't change after it's formation.
+# So, even copying them won't make a difference.so, maximum all copied objects have same memory
+# address of the original string.
 
 print("**********************************************")
 # Re-assigning values of initialized strings with another value,
