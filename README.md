@@ -2,6 +2,12 @@
 <h3 align="center">A passionate Backend developer from India</h3>
 <h4 style="color:red;"> Why this Repo?</h4>
 <h5 style="color:green;"> The main objective of this repo is to learn python by copying this code and paste in your IDE and learn from the outputs!</h5>
+<h5 style="color:green;">1)Open PythonTutorials Folder</h5>
+<h5 style="color:green;">2)Open any python file you want to learn</h5>
+<h5 style="color:green;">3)Copy the entire code </h5>
+<h5 style="color:green;">4)Open VScode / pycharm / any favorite IDE</h5>
+<h5 style="color:green;">5)Paste the code and run it</h5>
+<h5 style="color:green;">6)Look at the outputs and learn from those while viewing the original code in your IDE</h5>
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=yokee-ss-hh&label=Profile%20views&color=0e75b6&style=flat" alt="yokee-ss-hh" /> </p>
 
 - 🔭 I’m currently working on **Python Projects**
