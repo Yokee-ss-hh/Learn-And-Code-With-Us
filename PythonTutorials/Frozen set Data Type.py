@@ -98,5 +98,8 @@ print(f3 is f1) # Both f1 and f3 points to same memory
 f4 = frozenset(f2)
 print(f4 is f2) # Both f4 and f2 points to same memory
 
-
+'''
+Set Methods like union,intersection,difference,symmetric difference,issuperset,issubset,isdisjoint-
+- works on frozen sets.
+'''
 
