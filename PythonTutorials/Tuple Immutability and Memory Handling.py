@@ -98,16 +98,6 @@ print("copy_tuple3 and c3 after changes : ",copy_tuple2,c3)
 
 print("We can see aliasing on all 3 tuples and on their aliases!")
 
-c4 = tuple(list(copy_tuple1).copy())
-c5 = tuple(list(copy_tuple2).copy())
-c6 = tuple(list(copy_tuple3).copy())
-
-print(c4 is copy_tuple1)
-print(c5 is copy_tuple2)
-print(c6 is copy_tuple3)
-
-print("Copying 3 different tuples creates all 3 new tuples in memory")
-
 c7 = tuple(copy_tuple1)
 c8 = tuple(copy_tuple2)
 c9 = tuple(copy_tuple3)
