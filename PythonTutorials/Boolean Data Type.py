@@ -65,3 +65,41 @@ print(bool(set({})) == False)
 print("**frozenset**")
 print(bool(frozenset()) == False)
 print(bool(frozenset({})) == False)
+
+
+print("*******************************************************************************")
+print("****************all() and any() methods************************")
+# any() takes exactly 1 iterable as input and checks that iterable has atleast 1 item that evaluates to True.
+print(any([2,3,4,5]))
+print(any([])) # empty iterable list
+print(any([1,0,0,0,0,False,0.0]))
+print(any((12,)))
+print(any(())) # empty iterable tuple
+print(any({})) # empty iterable dictionary
+print(any(set())) # empty iterable set
+print(any(frozenset())) # empty iterable frozenset
+print(any('yokesh')) # string is also iterable
+print(any('')) # empty string
+
+
+# a11() takes exactly 1 iterable as input and checks the all iterable items evaluates to True.
+print(all([2,3,4,5]))
+print(all([])) # empty iterable list
+print(all([1,0,0,0,0,False,0.0]))
+print(all((12,)))
+print(all(())) # empty iterable tuple
+print(all({})) # empty iterable dictionary
+print(all(set())) # empty iterable set
+print(all(frozenset())) # empty iterable frozenset
+print(all('yokesh')) # string is also iterable
+print(all('')) # empty string
+
+'''
+     case:                                          any()                   all()
+    --------                                       ----------               ----------
+     All true values                                 True                     True
+     All false values                                False                    False
+     One item is true, other items are false         True                     False
+     One item is false, other items are true         True                     False
+     Empty iterable with no items                    False                    True
+'''
