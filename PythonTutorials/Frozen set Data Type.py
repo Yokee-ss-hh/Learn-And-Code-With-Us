@@ -102,4 +102,14 @@ print(f4 is f2) # Both f4 and f2 points to same memory
 Set Methods like union,intersection,difference,symmetric difference,issuperset,issubset,isdisjoint-
 - works on frozen sets.
 '''
+print("***copying using copy module***")
 
+cf1 = frozenset([1,2,3,4,5])
+
+cf2 = copy.copy(cf1)
+cf3 = copy.deepcopy(cf1)
+
+print(cf1 is cf2)
+print(cf1 is cf3)
+
+# deep copying allocates new memory for the copied object. 
