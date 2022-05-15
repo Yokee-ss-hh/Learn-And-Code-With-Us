@@ -110,3 +110,22 @@ print(id(c9),id(copy_tuple3))
 print(c9 is copy_tuple3)
 
 print("No copying occurs when we try with tuple() constructor")
+
+'''
+tuples don't have any copy() method to perform copying, one method we discussed above.
+So converting tuple to list and copying denotes list copying but not the tuple copying, so-
+- immutable tuple doesn't need copying , even if we copy copied object points to the original tuple-
+- address location only.
+Similarly, immutable strings and frozensets behaves the same way.
+'''
+print("***copying using copy module***")
+
+tple_one = ('1','2','three')
+
+copyof_tple_one = copy.copy(tple_one)
+
+print(tple_one is copyof_tple_one) # Both copied and original tuples are pointing to same address.
+
+deepcopyof_tple_one = copy.deepcopy(tple_one)
+
+print(tple_one is deepcopyof_tple_one) # Both are pointing to same address.
