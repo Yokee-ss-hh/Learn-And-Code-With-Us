@@ -325,3 +325,18 @@ print("****************************************************************")
 
 print(4 & 1)  # 0100 & 0001 = 0000 ~ 0
 print(9 & 1)  # 1001 & 0001 = 0001 ~ 1
+
+print("****************************************************************")
+print("**********ternary operator**********")
+'''
+In java,c++,c,c#, we have variable = expression?statement1:statement2
+if expression evaluates to True, then statement1 evaluates.
+if expression evaluates to False, then statement2 evaluates.
+'''
+# In python there is no ternary operator, so we can use list or tuple for that.
+
+var = (21,31)[2>3]
+print(var)
+
+# 2>3 is the expression.
+# line 340 gives (21,31)[False] --> (21,31)[0] --> 21
