@@ -88,7 +88,8 @@ favorite = {'fruit':'mango','vegetable':'potato','drink':'coconut water','dish':
 print(favorite['dish'])
 # using get()
 print(favorite.get('drink'))
-
+print(favorite.get('lassi',"lassi not found"))
+# In the above line, if lassi is not a key in favorite dict(), then 'lassi not found' is returned.
 
 # The returned list is a view of the items of the dictionary,
 # meaning that any changes done to the dictionary will be reflected/ updated in the-
