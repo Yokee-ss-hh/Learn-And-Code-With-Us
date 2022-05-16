@@ -113,6 +113,10 @@ print(t3)
 
 print("**Tuple Repetetion**")
 print(t1 * 5)
+my_tuple_str = ('yokesh')*3 # this is not tuple, ('yokesh',) is tuple, so ('yokesh') is treated as string
+print(my_tuple_str)
+my_tup = ('yokesh',)*3
+print(my_tup)
 
 print("**count(value) and index(value,start,stop)**")
 
