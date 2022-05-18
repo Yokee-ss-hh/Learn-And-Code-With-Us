@@ -170,6 +170,16 @@ print(list_of_lists)
 
 # Even though we updated item1 of list, all 3 items get auto updated because 3 lists formed-
 # - inside a main list has reference to that single list item in line 3.
+
+listt_of_listts = [1,2,[3,4]]
+
+listt_of_listts *= 3
+
+print(listt_of_listts)
+
+listt_of_listts[2].append(5)
+
+print(listt_of_listts)
 '''
 -------
 When you shallow copy arr1 (as shown below), you get arr2. arr1 and arr2 have DIFFERENT id but referencing the same
