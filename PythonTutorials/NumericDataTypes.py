@@ -340,3 +340,108 @@ print(var)
 
 # 2>3 is the expression.
 # line 340 gives (21,31)[False] --> (21,31)[0] --> 21
+
+
+print("*****************************************************************")
+print("***** methods on int datatype *****")
+# int data type internally implements numbers.Integral abstract base class, so int has some in-built methods.
+print(a.real)
+print(a.imag)
+print(b.real)
+print(b.imag)
+
+# returns length of the binary representation of a integer by removing negative signs and 0b in the beginning.
+print(a.bit_length())
+print(b.bit_length())
+'''
+Line 356 is equivalent to,
+def bit_length(self):
+     s = bin(self)
+     s = s.lstrip('-0b')
+     return len(s)
+'''
+
+
+# returns count of 1's in the binary representation of integer.
+print(a.bit_count()) # bin(2) = '0b10'.count('1') = 1
+print(b.bit_count()) # bin(-23) = -'0b10111'.count('1') = 23
+
+
+# some_integer.to_bytes(length,byteorder,signed) returns array of bytes representing an integer(byte array).
+print((1024).to_bytes(2,byteorder = 'big')) # By default signed = 'False'
+print((1024).to_bytes(10,byteorder = 'big'))
+print((-1024).to_bytes(10,byteorder = 'big', signed = 'True'))
+
+print((1024).to_bytes(2,byteorder = 'little')) # By default signed = 'False'
+print((1024).to_bytes(10,byteorder = 'little'))
+print((-1024).to_bytes(10,byteorder = 'little', signed = 'True'))
+
+# output of line 374 = reversed output of line 378
+# output of line 375 = reversed output of line 379
+# output of line 376 = reversed output of line 380
+'''
+1) The byteorder argument determines the byte order used to represent the integer. 
+If byteorder is "big", the most significant byte is at the beginning of the byte array. 
+If byteorder is "little", the most significant byte is at the end of the byte array.
+2) The signed argument determines whether two’s complement is used to represent the integer. 
+If signed is False and a negative integer is given, an OverflowError is raised. 
+The default value for signed is False
+'''
+
+
+# int.from_bytes(byte array,byte order, signed)  by default signed = 'False'
+
+print(int.from_bytes(b'\x00\x10', byteorder='big')) # returns 16
+print(int.from_bytes(b'\x00\x10', byteorder='little')) # returns 4096
+print(int.from_bytes(b'\xfc\x00', byteorder='big', signed=True))
+print(int.from_bytes(b'\xfc\x00', byteorder='big', signed=False))
+
+# Lines 397 and 398 has same byte arrays but different outputs
+# Lines 399 and 400 has same byte arrays but different outputs
+
+print(a.numerator)
+print(a.denominator)
+
+print(b.numerator)
+print(b.denominator)
+
+print(a.conjugate())
+print(b.conjugate())
+
+print(a.as_integer_ratio())
+print(b.as_integer_ratio())
+
+
+print("********************************************************************")
+print("***** methods on float datatype *****")
+print(d.real)
+print(e.real)
+print(d.imag)
+print(e.imag)
+
+print(d.as_integer_ratio())
+print(e.as_integer_ratio())
+
+print(d.is_integer())
+print(e.is_integer())
+print((2.0).is_integer())
+
+print(d.hex())
+print(e.hex())
+
+print("********************************************************************")
+print("***** methods on complex datatype *****")
+
+print(f.real)
+print(f.imag)
+print(f.conjugate())
+
+print(g.real)
+print(g.imag)
+print(g.conjugate())
+
+print(h.real)
+print(h.imag)
+print(h.conjugate())
+
+print("*********************************************************************")
