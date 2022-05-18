@@ -157,6 +157,19 @@ print(original_list)
 # As deep copy recursively copies the elements of the original list into copied list, we don't have any-
 # -problem with mutable types.
 
+
+list_of_lists = [[]]
+
+list_of_lists *= 3
+
+print(list_of_lists)
+
+list_of_lists[0].append(3)
+
+print(list_of_lists)
+
+# Even though we updated item1 of list, all 3 items get auto updated because 3 lists formed-
+# - inside a main list has reference to that single list item in line 3.
 '''
 -------
 When you shallow copy arr1 (as shown below), you get arr2. arr1 and arr2 have DIFFERENT id but referencing the same
