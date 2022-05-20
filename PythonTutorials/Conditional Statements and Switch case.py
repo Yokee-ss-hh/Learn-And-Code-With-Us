@@ -32,17 +32,8 @@ elif age == 18:
 else:
     print("This is else statement of age condition")
 
-# If any of if,elif,else has one statement , we can write them in one line as,
-
-if "yokesh".upper() == "YOKESH": print("yokesh changed to YOKESH") # one liner if condition
-
-if bin(2) == '0b110': pass
-elif bin(2) == '0b10' : print("Binary format of 2 is : ",bin(2))
-
-if 2>3 : pass
-elif 3>4 : pass
-else: print("Else is printed in one liner statement")
-
+    
+# Implemented in python recent versions...
 print("*************Switch Cases/ match cases*****************")
 
 match http_code:=int(input("enter status code : ")):
@@ -55,5 +46,16 @@ match http_code:=int(input("enter status code : ")):
           print("Oh dear, nothing is matched")
 
 
+print('********** one liners if/elif/else ***************')
 
+# if-else one liner
+print(20  if 20 % 2 == 0 else '20 is not divisible by 2')
+
+minimum_age = int(input('Enter your age bro!'))
+
+# if-elif-else one liner
+print('accepted' if minimum_age > 20 else 'its ok' if minimum_age == 18 else 'not accepted bro!')
+
+# NOTE : We cannot write only if condition without any elif/else in lone liners.
+# Python raises error to write else statement if we do so.
 
