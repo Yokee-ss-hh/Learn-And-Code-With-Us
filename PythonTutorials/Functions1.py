@@ -307,7 +307,8 @@ print('after changing, outer_string =', outer_string2, id(outer_string2))
 # After the function returned 'In a kingdom by the sea' object which has a new memory address, python-
 # - simply breaks the outer_string2 connection to  'It was many and many a year ago' object and make-
 # - outer_string2 points to new object with value 'In a kingdom by the sea'.
-
+# The object "'It was many and many a year ago'" will be cleaned by garbage collector as it's reference-#
+# - count is dropped to zero.
 print("************** Another Example **************")
 
 
