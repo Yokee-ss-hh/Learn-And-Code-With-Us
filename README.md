@@ -1,5 +1,5 @@
-<h1 align="center">Hi 👋, I'm YOKESH</h1>
-<h3 align="center">A passionate Backend developer from India</h3>
+<h1 align="center">Hi 👋, We are Yokesh & Vineeth</h1>
+<h3 align="center">A passionate Backend and Automation developers from India</h3>
 <h4 style="color:red;"> Why this Repository ?</h4>
 <h5 style="color:green;"> The main objective of this repo is to learn python by copying this code and paste in your IDE and learn from the outputs!</h5>
 <h4 style="color:green;">How to use this Repository ?</h4>
@@ -11,13 +11,13 @@
 <h5 style="color:green;">6)Look at the outputs and learn from those while viewing the original code in your IDE</h5>
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=yokee-ss-hh&label=Profile%20views&color=0e75b6&style=flat" alt="yokee-ss-hh" /> </p>
 
-- 🔭 I’m currently working on **Python Projects**
+- 🔭 I’m currently working on **Python and Java Projects**
 
 - 🌱 I’m currently learning **Django,Python 3.10,Kafka and Redis**
 
-- 💬 Ask me about **Django, Python**
+- 💬 Ask me about **Django, Python,Java,Selenium**
 
-- 📫 Reach me Via **bollineniyokesh@gmail.com**
+- 📫 Reach me Via **bollineniyokesh@gmail.com , **
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
