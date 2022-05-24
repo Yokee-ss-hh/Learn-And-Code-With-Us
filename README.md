@@ -17,7 +17,7 @@
 
 - 💬 Ask me about **Django, Python,Java,Selenium**
 
-- 📫 Reach me Via **bollineniyokesh@gmail.com , **
+- 📫 Reach me Via **bollineniyokesh@gmail.com ,vnthurs@gmail.com **
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
