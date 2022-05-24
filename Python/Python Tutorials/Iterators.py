@@ -6,7 +6,7 @@
 -which consist of the methods __iter__() and __next__() .
 4) next() and __next__() should be implemented by the iterator only, if on iterable giver error
 5) iter() and __iter__() should be used on iterable only, if on iterator gives another iterator-
- - at the same memory location.
+ - at the different memory location.
 
 Example for point 4 and 5 :
 
@@ -393,7 +393,33 @@ for x in range(limit):
 print('******************************************************************************')
 
 
+# 2 iterators on same iterable are different.
 
+my_list = [1,2,3,4,5,6,7,'yokesh']
+
+my_iter1 = iter(my_list)
+
+my_iter2 = iter(my_list)
+
+print(my_iter1,my_iter2)
+
+print(my_iter1 is my_iter2)
+print(my_iter1 == my_iter2)
+
+
+my_string = 'currency'
+
+my_iter3 = iter(my_string)
+
+my_iter4 = iter(my_string)
+
+print(my_iter3,my_iter4)
+
+print(my_iter3 is my_iter4)
+
+print(my_iter3 == my_iter4)
+
+print("*************************************************************************")
 
 
 
