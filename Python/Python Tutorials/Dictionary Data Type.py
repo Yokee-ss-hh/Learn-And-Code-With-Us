@@ -377,3 +377,14 @@ print(min({'one':1,'two':2,'three':3,'four':4}))
 # TypeError: unsupported operand type(s) for +: 'int' and 'str'
 
 print(sum(list({'one':1,'two':2,'three':3,'four':4}.values())))
+
+
+print("*****************************************************************************************")
+print("***** Dictionary Comprehensions *******")
+
+print({x.upper():y*2 for x,y in {'fruit':'mango','even':2,'odd':3}.items()})
+print({x: x**3 for x in range(10) if x**3 % 4 == 0})
+print({x.upper(): x*3 for x in 'coding '})
+keys = ['a','b','c','d','e']
+values = [1,2,3,4,5]
+print({k:v for k,v in zip(keys,values)})
