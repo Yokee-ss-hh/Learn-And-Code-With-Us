@@ -4,6 +4,19 @@
  -through all the values.
 3) Technically, in Python, an iterator is an object which implements the iterator protocol-
 -which consist of the methods __iter__() and __next__() .
+4) next() and __next__() should be implemented by the iterator only, if on iterable giver error
+5) iter() and __iter__() should be used on iterable only, if on iterator gives another iterator-
+ - at the same memory location.
+
+Example for point 4 and 5 :
+
+fruits = ['apple','banana','cherry']
+
+f1_iter = iter(fruits)
+print(f1_iter)
+
+f2_iter = iter(f1_iter)
+print(f2_iter)
 '''
 
 iterable1 = 'yokesh'
