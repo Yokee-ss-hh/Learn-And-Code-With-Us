@@ -150,4 +150,27 @@ print(min((3,4,22,11,44,99,9)))
 print(len((3,4,22,11,44,99,9)))
 
 
+print("**************************************************************************")
+print("***** tuple comprehensions ******")
+'''
+1) As lists has list comprehension using [] brackets,We may assume tuple also has -
+-tuple comprehension using () brackets.
+2) But, () is already allotted to generator comprehensions, tuple wont support-
+-() brackets for tuple comprehension.
+3) Instead, we can decode that generator comprehensions using tuple() constructor
+4) We can use unpacking operator/ splat operator
+'''
+
+xx = tuple(x*2 for x in (1,2,3,4,5))
+print(xx)
+
+yy = *(y+5 for y in (1,2,3,4,5)),
+# Why comma at last,
+# Well, It says to python that after unpacking these values , these should be assigned to -
+# - variable 'yy' as a tuple.
+# *(6,7,8,9,10), = 6,7,8,9,10, = (6,7,8,9,10)
+print(yy)
+
+
+
 
