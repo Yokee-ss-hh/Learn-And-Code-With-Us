@@ -37,6 +37,12 @@ try:
 except StopIteration:
     print("You have reached end of the string iterable")
 
+# We can use for-loop directly on iter object to get associated values,
+
+
+for y in iterator_a2:
+    print(y,end=",")
+print('\n')
 
 print("***** List Iterable *****")
 
@@ -61,6 +67,10 @@ try:
 except StopIteration:
     print("You have reached end of the list iterable")
 
+for y in iterator_b2:
+    print(y,end=",")
+print('\n')
+
 print("***** Tuple Iterable *****")
 
 iterator_c1 = iter(iterable3)
@@ -83,6 +93,10 @@ try:
 
 except StopIteration:
     print("You have reached end of the tuple iterable")
+
+for y in iterator_c2:
+    print(y,end=",")
+print('\n')
 
 print("***** Set Iterable *****")
 
@@ -107,6 +121,10 @@ try:
 except StopIteration:
     print("You have reached end of the set iterable")
 
+for y in iterator_d2:
+    print(y,end=",")
+print('\n')
+
 print("***** Dictionary Iterable *****")
 
 iterator_e1 = iter(iterable5)
@@ -116,6 +134,10 @@ print(type(iterator_e1))  # o/p : <class 'dict_keyiterator'>
 iterator_e2 = iterable5.__iter__()
 print(iterator_e2)
 print(type(iterator_e2))
+
+iterator_e3 = iterable5.__init__()
+print(iterator_e3)
+print(type(iterator_e3))
 
 # By default it takes keys
 try:
@@ -131,6 +153,7 @@ try:
 except StopIteration:
     print("You have reached end of the dictionary iterable keys")
 
+
 # For values we can use,
 try:
     print(iterable5[next(iterator_e2)])
@@ -145,12 +168,11 @@ try:
 except StopIteration:
     print("You have reached end of the dictionary iterable values")
 
-
+print('\n')
 print("***** Range Iterable *****")
 iterator_f1 = iter(iterable6)
 print(iterator_f1)
-print(type(iterator_f1))  # o/p : <class 'range_iterator'>
-
+print(type(iterator_f1))
 iterator_f2 = iterable6.__iter__()
 print(iterator_f2)
 print(type(iterator_f2))
@@ -168,6 +190,10 @@ try:
 except StopIteration:
     print("You have reached end of the range iterable")
 
+for c in iterator_f2:
+    print(c,end=",")
+print('\n')
+
 print("****************************************************************************")
 print("******* How for loop works on iterables *******")
 '''
@@ -181,7 +207,7 @@ for_loop_iterable = ['abc',12,99,4.098]
 
 for element in for_loop_iterable:
     print(element,end=",")
-
+print('\n')
 for_loop_iter = for_loop_iterable.__iter__()
 
 
@@ -197,7 +223,7 @@ while True:
 
         break
 
-
+print('\n')
 print("***********************************************************************")
 print("*********** Custom Iterators ***************")
 
@@ -352,6 +378,7 @@ for x in range(limit):
 # TO understand the above statements, look at the PowTwo class custom iterator.
 
 print('******************************************************************************')
+
 
 
 
