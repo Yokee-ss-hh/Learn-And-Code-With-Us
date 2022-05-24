@@ -328,4 +328,8 @@ print(id(copied_set3))
 print("set copied using unpacking original set into {} creates new set in the memory")
 
 print("************************************************************************************")
+print("***** Set Comprehensions *****")
 
+print({x for x in [1,2,3,4,5,6,7,9]}, type({x for x in [1,2,3,4,5,6,7,9]}))
+print({value for value in 'yokesh' if ord(value) > 110})
+print({s for s in {'p1':10,'p2':20,'p3':30,'p4':40}. values()})
