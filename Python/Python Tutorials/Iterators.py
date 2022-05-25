@@ -7,6 +7,7 @@
 4) next() and __next__() should be implemented by the iterator only, if on iterable giver error
 5) iter() and __iter__() should be used on iterable only, if on iterator gives another iterator-
  - at the different memory location.
+6) Iterator stores one element at a time in the memory.
 
 Example for point 4 and 5 :
 
