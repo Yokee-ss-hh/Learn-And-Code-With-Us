@@ -422,6 +422,10 @@ print(my_iter3 == my_iter4)
 
 print("*************************************************************************")
 
+# Proof that iterables support and has iter() method in them,
+print('__iter__' in dir(my_string))
+# proof that returned iterator from iter(iterable) has next() method in it,
+print('__next__' in dir(my_iter3))
 
 
 
