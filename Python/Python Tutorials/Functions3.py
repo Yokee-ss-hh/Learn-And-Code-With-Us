@@ -623,4 +623,63 @@ print([(lambda x : x*x)(x)  for x in [1,2,3,4,5,6,7,8,9,10]]) # o/p : [1, 4, 9, 
 
 print("*********************************************************************")
 
+print("***** Most Confusing And Important Topic! *****")
+print("*********************************************************************")
+print("***** Decorators with parameters *****")
+'''
+The syntax for decorators with arguments is a bit different - 
+The decorator with arguments should return a function that will take a function and return another function. 
+So it should really return a normal decorator. A bit confusing, right?
+'''
 
+
+def outer_function(*some_args):
+
+    print("You are inside outer_function")
+
+    def inner_one(some_function):
+
+        print("You are inside inner_one")
+
+        def inner_two(*some_more_args):
+
+            print("You are inside inner_two")
+            a,b = some_args[0],some_args[1]
+            c,d  = some_function(*some_more_args)
+            return a+b+c+d
+
+        return inner_two
+
+    return inner_one
+
+
+@outer_function(5,10)
+def some_func(x,y):
+    return x,y
+
+
+print(some_func(15,20))
+
+
+def decorator_main(**kwargs1):
+
+    def in_one(fn):
+
+        def in_two(**kwargs2):
+
+            a = kwargs1['f_name']
+            b = fn(**kwargs2)
+            return a+" "+b
+
+        return in_two
+    return in_one
+
+
+@decorator_main(f_name = 'yokesh')
+def that_func(**k):
+    return k['l_name']
+
+
+print(that_func(l_name = 'chowdary'))
+
+print("************************************************************************")
