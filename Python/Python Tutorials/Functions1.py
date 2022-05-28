@@ -326,3 +326,24 @@ print(wrapper[0])
 
 
 print("********************************************************************************")
+print("*********************************************************")
+print("***** multiple return statements : *****")
+
+def multiple_returns(num):
+
+    if num > 3 and num < 5:
+
+         return 'OK'
+
+    elif num > 5 and num < 10:
+
+        return 'hello'
+
+    return 'hi' # This acts as else block
+
+
+print(multiple_returns(num:=int(input('Enter num :'))))
+
+# num = 10, o/p = hi
+# num = 7 , o/p = hello
+# num = 4, o.p = ok
