@@ -400,4 +400,17 @@ my_list_str = ['yokesh']*3
 print(my_list_str)
 
 print("*********************************************************************************")
+weird_list1 = [1,2,3,4,5]
 
+weird_list2 = weird_list1
+
+weird_list2.append(weird_list1)
+
+print(weird_list1)
+print(weird_list2)
+
+print(weird_list1[5])
+print(weird_list1[5][4])
+print(weird_list1[5][5][5][3])
+
+# Read This : https://stackoverflow.com/questions/17160162/what-do-ellipsis-mean-in-a-list
