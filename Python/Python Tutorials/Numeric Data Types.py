@@ -147,6 +147,7 @@ print(12/-5)
 print(-13/-4)
 print(0/21) # gives float as output
 print(-0/12)
+print(3/10) # o/p : 0.3
 print("***********************************")
 
 # Floor Division
@@ -158,6 +159,7 @@ print(12//-5)
 print(-13//-4)
 print(0//21)
 print(-0//12)
+print(3//10) # o/p : 0 as 0.3 rounded to 0
 print("***********************************")
 
 # Modulo Operator
@@ -172,6 +174,8 @@ print(12%-5)
 print(-13%-4)
 print(0%21)
 print(-0%12)
+print(3%10) # o/p : 0
+# num % den = 0 , if num < den 
 print("*************************************")
 
 # Exponentation Operator
