@@ -4,7 +4,7 @@ In Built Data Types (Numeric, Sequence, Text, Mapping, Set, Boolean, Binary, Non
 Mutable and Immutable differences and main concepts regarding memory usage
 Iterable Expressions (List, Tuple, Set, Dictionary Comprehensions)
 In Built Functions like (map, filter, max, min, sum...........etc, Explore more by searching google or refer Inbuilt functions.py in the Repository)
-Conditional Statements (if,elif,else,switch)
+Conditional Statements (if,elif,else,match-case)
 Looping Statements (for,while)
 Iterators
 Generators, Generator Expressions, Lazy Evaluation vs Strict Evaluation , Normal methods vs generators, generator methods like send(),yield from and raise()  etc....
