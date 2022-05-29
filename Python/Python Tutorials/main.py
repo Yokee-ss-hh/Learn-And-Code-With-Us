@@ -7,7 +7,7 @@ In Built Functions like (map, filter, max, min, sum...........etc, Explore more 
 Conditional Statements (if,elif,else,switch)
 Looping Statements (for,while)
 Iterators
-Generators, Generator Expressions, Lazy Evaluation vs Strict Evaluation , Normal methods vs generators etc....
+Generators, Generator Expressions, Lazy Evaluation vs Strict Evaluation , Normal methods vs generators, generator methods like send(),yield from and raise()  etc....
 Scope of variables and Functions
 Anonymous Functions (Lambda)
 Closures, Decorators, Decorator Chaining, Decorators with parameters and without parameters
@@ -16,5 +16,20 @@ File Handling
 Exceptions Handling
 Modules and packages 
 Main Important Modules (os,sys,itertools,functools,math,collections,regex,abc,random,datetime,requests,json etc...)
+OOPS
+{
+  1) classes
+  2) objects
+  3) constructors, destructors and it's methods , constructor inheritance using Base() and Super()
+  4) methods vs functions difference
+  5) types of methods : static vs class vs instance 
+  6) types of variables : static variables / class variables and instance variables / object variables
+  7) Inheritance
+  8) Abstraction using abc module
+  9) polymorphism , overloading and overriding 
+  10) Interfaces 
+  11) Encapsulation using Underscores anology
+  12) data hiding and reflection
+  13) Dunder / Magic methods (very important)
+}
 
-# Add OOPS from here ! after completing above all topics.
