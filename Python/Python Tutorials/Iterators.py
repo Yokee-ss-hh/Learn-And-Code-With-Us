@@ -428,4 +428,27 @@ print('__iter__' in dir(my_string))
 print('__next__' in dir(my_iter3))
 
 
+print("**************************************************************************")
+print("************ Some Examples *****************")
+
+fruits_iter = iter(['apple','mango','banana','orange','cherry'])
+
+print(list(fruits_iter))
+
+fruits_iter1 = iter([2,43,13,132,1,9,99,21])
+
+print(tuple(fruits_iter1))
+
+for item in iter({'a','e','i','o','u'}):
+    print(item,end=',')
+
+
+even_it = [2,4,6,8,10,12,14,16]
+even_iter = iter(even_it)
+
+try:
+    for x in range(len(even_it)):
+        print(x)
+except StopIteration:
+    print("You are at the end of the Iterable")
 
