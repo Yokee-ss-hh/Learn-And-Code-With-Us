@@ -30,6 +30,7 @@ OOPS
   10) Interfaces 
   11) Encapsulation using Underscores anology
   12) data hiding and reflection
-  13) Dunder / Magic methods (very important)
+  13) Data Classes
+  14) Dunder / Magic methods (very important)
 }
 
