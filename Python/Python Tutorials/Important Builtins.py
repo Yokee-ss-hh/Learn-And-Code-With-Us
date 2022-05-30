@@ -359,6 +359,46 @@ print(reduce(lambda a,b : a if a % 2 == 0 else b , [], 23))
 print(reduce(lambda a,b : a if a % 2 == 0 else b , [], [1,2,3,4]))
 print(reduce(lambda a,b : a if a % 2 == 0 else b , [], 'this is because of empty iterable to reduce'))
 
+print('\n')
+
+print("********* range iterable **********")
+
+print(list(range(10)))
+print(max(range(7)))
+print(min(range(8)))
+
+
+print(range(3))
+print(type(range(3)))
+
+
+print(list(map(lambda x : x+3 , range(0,9,2))))
+
+print(tuple(map(lambda a : a*2 if a % 2 == 0 else a-10 , range(5))))
+
+
+for item in enumerate(range(5)):
+    print(item)
+
+for a,b in enumerate(range(3)):
+    print(a,b)
+
+
+range_enum = enumerate(range(2))
+print(next(range_enum))
+print(range_enum.__next__())
+
+
+print(list(zip(range(5),range(6,10))))
+print(dict(zip(['a','e','i','o','u'],range(5))))
+
+
+print(list(filter(lambda a : True if a == 2 else False , range(3))))
+
+print(tuple(filter(lambda y : bool(y) , range(0,1))))
+
+print(reduce(lambda x,y : x+y , range(10)))
+print(reduce(lambda a,b : a.upper() + b.lower() , list(chr(item) for item in range(70,75))))
 
 
 
