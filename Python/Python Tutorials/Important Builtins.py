@@ -401,6 +401,171 @@ print(reduce(lambda x,y : x+y , range(10)))
 print(reduce(lambda a,b : a.upper() + b.lower() , list(chr(item) for item in range(70,75))))
 
 
+print('\n')
+
+print("******  eval(), exec() and compile() *********")
+'''
+eval() steps :
+Parse expression
+Compile it to bytecode
+Evaluate it as a Python expression
+Return the result of the evaluation
+'''
+
+# 1)
+# eval(single expression,global dict(),local dict() ) :
+# It evaluates a string which contains single expression and return the calculated value.
+# exec(one or more expressions,globals,locals) :
+# It executes a string which contains one or more expression or statements. It always returns None.
+p = eval("sum([2, 2, 2])", {})
+q = eval("min([1, 2, 3])", {})
+r = eval("pow(10, 2)", {})
+print(p,q,r)
+
+s = exec("sum([2, 2, 2])", {})
+t = exec("min([1, 2, 3])", {})
+u = exec("pow(10, 2)", {})
+print(s,t,u)
+
+
+n = 1
+
+result1 = eval('''n * 2''')
+
+print(result1)
+
+eval('''print(n * 2)''')
+
+result2 = eval("++n")
+
+print(result2)
+
+k = 4
+
+result3 = exec('''k * 2''')
+
+print (result3)
+
+exec('''print(k * 2)''')
+
+result4 = '''print(k * 2)'''
+
+exec(result4)
+
+# What is the use of global and local dicts in eval() function :
+
+g = 20 # a global variable
+h = 30 # a global variable
+
+sum_result1 = eval("g+h",{'g':g,'h':h}) # this global dict() says eval() that g,h are global
+# variables and take their respective values from global level
+
+print(sum_result1) # o/p = 50
+
+sum_result2 = eval("g+h+i",{'g':g,'h':h,'i':40})
+
+print(sum_result2) # o/p = 90
+
+# Here i is not a global variable, but python gives temporary access to 'i' as
+# a global variable with value as 90
+
+
+# Now, how local dict() works , lets see
+def local_dict():
+    var_some = 45
+    re1 = eval("g+h+var_some",{'g':g,'h':h},{'var_some':var_some}) # Here python tells eval() that var_some is local
+# variable inside the local_dict() function
+    print(re1)
+
+
+local_dict()
+
+# 2)
+# Eval() only evaluates the single expression, not the complex logic code,-
+# whereas Exec can be used to execute any number of expression.
+# exec() accept the source code which contains statements like, for, while, print, import, class,
+# if we pass these statements to eval() it will throw error.
+
+
+try:
+    eval('for i in range(5):\n\tprint("hello")')
+except Exception as e :
+    print(e.args)
+    print("eval should have single expression")
+
+
+exec('for i in range(5):\n\tprint("hello")')
+
+
+# 3)
+# exec can be used to assign a value to variable , but eval will throw error
+
+exec('a=5')
+print(a)
+
+try:
+    eval('b=5')
+    print(b)
+
+except Exception as e1:
+    print(e1.args)
+    print("eval cannot make variable assignments")
+
+
+# How compile() works :
+
+# takes source code as input and returns a code object which
+# is ready to be executed and which can later be executed by the exec() / eval() function.
+
+# Syntax : compile(source, filename, mode, flags=0, dont_inherit=False, optimize=-1)
+
+'''
+Source – It can be a normal string, a byte string, or an AST object
+Filename -This is the file from which the code was read. 
+If it was not read from a file, you can give a name yourself.
+Mode – Mode can be exec, eval or single.
+a. eval – If the source is a single expression.
+b. exec – It can take a block of a code that has Python statements, class and functions and so on.
+c. single – It is used if consists of a single interactive statement
+Flags (optional) and dont_inherit (optional) – Default value=0. 
+It takes care that which future statements affect the compilation of the source.
+Optimize (optional) – It tells optimization level of compiler. Default value -1.
+'''
+
+srcCode = 'x = 10\ny = 20\nmul = x * y\nprint("mul =", mul)'
+execCode = compile(srcCode, 'mulstring', 'exec')
+exec(execCode)
+
+srcCode1 = "print(age+price)"
+execCode1 = compile(srcCode1,'add2params','eval')
+eval(execCode1,{'age':22,'price':100})
+
+xor = 50
+ababa = compile('xor', 'test', 'single')
+print(type(ababa))
+exec(ababa)
+
+ac = compile('xor == 50', '', 'eval')
+print(eval(ac))
+
+# Applications :
+'''
+If the Python code is in string form or is an AST object, and you want to change it to a code object, 
+then you can use compile() method.
+The code object returned by the compile() method can later be called using methods 
+like: exec() and eval() which will execute dynamically generated Python code.
+'''
+'''
+f = open('main.txt', 'r')
+temp = f.read()
+f.close()
+ 
+code = compile(temp, 'main.txt', 'exec')
+exec(code) 
+
+o/p : Yokesh is here 
+Assume main.txt has only one line 'Yokesh is here'
+'''
 
 
 
