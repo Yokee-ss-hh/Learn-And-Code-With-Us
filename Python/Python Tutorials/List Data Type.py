@@ -414,3 +414,14 @@ print(weird_list1[5][4])
 print(weird_list1[5][5][5][3])
 
 # Read This : https://stackoverflow.com/questions/17160162/what-do-ellipsis-mean-in-a-list
+
+'''
+my_list = ['yokesh','google']
+
+for item in my_list:
+
+    my_list.append(item)
+    print(item)
+'''
+
+# The above program if un-commented runs infinitely.
