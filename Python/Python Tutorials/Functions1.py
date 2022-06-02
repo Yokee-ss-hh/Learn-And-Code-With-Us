@@ -18,6 +18,13 @@ def fn_with_parameters(x,y):
 def fn_with_default_args(f_name = 'yokesh',l_name = 'chowdary'):
     return f_name+l_name
 
+# Note : IF a function has both default and normal parameters, then
+# default parameters should follow normal parameters
+# like fn(a,b,c,d=20) not fn(a=10,b,c,d) if we do so we will get error
+
+
+def fn_with_both_default_and_normal_params(a,b,c=10):
+    return a+b+c
 
 def fn_with_if(x):
     if x % 2 == 0:
@@ -44,7 +51,7 @@ print(fn_with_if(9))
 print(fn_with_if(10))
 print(fn_returns_list([69,70,71,72,73]))
 print(fn_returns_tuple())
-
+print(fn_with_both_default_and_normal_params(20,30))
 
 print("*******************************************************************************************")
 # In function definition, the arguments should maintain this format,
