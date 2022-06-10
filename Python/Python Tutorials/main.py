@@ -33,4 +33,15 @@ OOPS
   13) Data Classes
   14) Dunder / Magic methods (very important)
 }
-
+Typing and Types Modules (These 2 modules gives static typing effects at compile time coding)
+Collections Module
+Data Structures and Algorithms
+{
+  1) Linked Lists (singly linked list, double linked list, circular linked list, circular doubly linked lists)
+  2) Stack 
+  3) Queue ( Simple Queue, Circular Queue, Priority Queue, Doubly Ended Queue(deque)) 
+  4) Tree ( InOrder,PreOrder and PostOrder Traversals) , (General Tree with 'n' branches, Binary Tree, Binary Search Tree, AVL Tree, Red-Black Tree, N-ary Tree)
+  5) Graph ( BFS and DFS)
+  6) Heap (min-heap and max-heap)
+  7)
+}
