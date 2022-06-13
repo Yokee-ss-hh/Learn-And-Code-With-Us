@@ -1333,7 +1333,27 @@ print(my_dict['Bob'])
 # Try to access Non-existing key :
 print(my_dict['David'])
 
-print("**********")
+print("***************************************************************************************")
+# reversed() returns an iterator that contains items in reverse order
+
+
+class ReverseCheck:
+
+    def __init__(self,data):
+
+        self.data = data
+
+    def __reversed__(self):
+
+        return reversed(self.data)
+
+
+rc = ReverseCheck([1,2,3,4,5])
+for item in reversed(rc):
+    print(item)
+
+print("***********************************************************************************")
+
 
 # References : https://rszalski.github.io/magicmethods/#intro
 
