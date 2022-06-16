@@ -305,7 +305,8 @@ class StaticExample:
     def sample1():
 
         print("Hi i am sample method1")
-
+        
+    @staticmethod
     def sample2():
 
         print("Hi i am sample method2")
