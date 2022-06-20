@@ -12,6 +12,7 @@ Scope of variables and Functions
 Anonymous Functions (Lambda)
 Closures, Decorators, Decorator Chaining, Decorators with parameters and without parameters
 Dunder or Magic methods
+Descriptors 
 File Handling
 Exceptions Handling
 Modules and packages 
@@ -24,16 +25,24 @@ OOPS
   4) methods vs functions difference
   5) types of methods : static vs class vs instance 
   6) types of variables : static variables / class variables and instance variables / object variables
-  7) Inheritance
+  7) Inheritance(single,multiple,multi-level,hierarchial,hybrid)
+     {
+      - In multiple inheritance,constructor inheritance using class name creates duplicates
+      - How the above problem is solved using super()
+      - How mro works 
+      - How super() uses mro internally
+      - How super() resolves duplicates from 2 parents in hybrid inheritance
+     }
   8) Abstraction using abc module
-  9) polymorphism , overloading and overriding 
-  10) Interfaces 
+  9) polymorphism , function overloading and method overriding 
+  10) Interfaces using abstract base classes in which all methods are of abstract type
   11) Encapsulation using Underscores anology
   12) data hiding and reflection
-  13) Data Classes
+  13) Data Classes (inbuilt init, repr, field(), inheritance anologies.....etc)
   14) Dunder / Magic methods (very important)
+  15) InnerClasses (single inner class, multiple inner classes inside a single class, multilevel inner classes ...)
 }
-Typing and Types Modules (These 2 modules gives static typing effects at compile time coding)
+Typing and Types Modules (These 2 modules gives static typing effects)
 Collections Module
 Data Structures and Algorithms
 {
@@ -43,5 +52,13 @@ Data Structures and Algorithms
   4) Tree ( InOrder,PreOrder and PostOrder Traversals) , (General Tree with 'n' branches, Binary Tree, Binary Search Tree, AVL Tree, Red-Black Tree, N-ary Tree)
   5) Graph ( BFS and DFS)
   6) Heap (min-heap and max-heap)
-  7)
+  7) Algorithms
+  {
+   - Dynamic Programming
+   - Memoization technique
+   - Recursion
+   - Branch and Bound using BFS
+   - Back Traking using DFS
+   - Inorder, Preorder and Postorder in trees
+  }
 }
