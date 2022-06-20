@@ -519,3 +519,11 @@ print(a1.__dict__)
 # __setattr__(self,name,value) is invoked by self.name = value
 # __delattr__(self,name) is invoked by del self.name
 # __getattribute__(self,name) is invoked by self.name ,if name exists.
+
+
+print("**********************************************************************************")
+
+# objects uses __getattr__, __setattr__ and __delattr__ to get a value, set a value and delete a value of the respective object.
+# derived classes uses __get__, __set__ and __del__ that are defined in the base class(descriptor) to achieve property in python.
+# To understand above line, see line 295 . That's how property in python works internally.
+# Descriptors are the ones used to create a property by python internally.
