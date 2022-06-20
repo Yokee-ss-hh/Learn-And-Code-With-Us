@@ -289,76 +289,6 @@ This makes it possible to create your descriptor without specifying the name of 
 internal attribute that you need to use for storing the value. Your code also looks nicer and cleaner now!
 '''
 
-print("************ __getattr__  vs __getattribute__  vs getattr() ****************")
-
-# __getattr__ gets called if there is no attribute in the instance
-# It is invoked 'last' , if python cannot find that attribute
-# __getattr__ has lowest pripority
-
-# 1) __getattribute__ gets called all the times whether there is the attribute or not
-# 2) It is invoked first(highest priority)
-# 3) So, even if there is the attribute in the instance, python calls __getattribute__ first
-#    with the attribute as an argument
-
-
-# getattr() has 2 or 3 parameters
-# getattr(myobj,myattribute) is same as myobj.getattribute(myattribute)
-# The 3rd argument is default attribute
-
-class A:
-
-    def __getattr__(self, name):
-
-        return ('hahahaha'+name)
-
-
-a = A()
-a.ace = 'ace value'
-
-print(a.ace)
-print(a.ace2)
-print(a.__dict__)
-
-# python could find 'ace' , so prints the value of 'ace'
-# But, 'ace2' cannot be found, so __getattr_ is invoked.
-# If we print a.__dict__ , we can see the attribute 'ace' with value of it
-
-# What if we add __getattribute__ to class 'A'
-
-
-class A1:
-
-    def __getattr__(self, name1):
-
-        return ('hahahaha'+name1)
-
-    def __getattribute__(self, name2):
-
-        return ('holaaaaaa'+name2)
-
-
-a1 = A1()
-a1.ace1 = 'ace value1'
-
-print(a1.ace1)
-print(a1.ace2_2)
-print(a1.__dict__)
-
-# 1) Even though we assigned a value 'ace value1' to the attribute 'ace1'
-# __getattribute__ is invoked first . Python doesn't even try to find 'ace1'
-# 2) 'ace2_2' does not exist .So, __getattribute__ is called here not __getattr__
-# 3) If we see the output of a1.__dict__, we can again conclude that __getattribute__ is invoked
-# 'first', the highest priority
-
-# In short,
-# __getattribute__ gets called "first"(the highest priority),whether or not there is the attribute
-# __getattr__ gets called "last"(the lowest priority), if python cannot find the attribute
-
-# __getattr__(self,name) is invoked by self.name if name does not exist
-# __setattr__(self,name,value) is invoked by self.name = value
-# __delattr__(self,name) is invoked by del self.name
-# __getattribute__(self,name) is invoked by self.name ,if name exists.
-
 print("*****************************************************************************************")
 
 
@@ -518,4 +448,74 @@ print(oven3.farenheit1)
 
 print("**********************************************************************************")
 
+# The below topic is not related to descriptor but related to normal class and objects
 
+print("************ __getattr__  vs __getattribute__  vs getattr() ****************")
+
+# __getattr__ gets called if there is no attribute in the instance
+# It is invoked 'last' , if python cannot find that attribute
+# __getattr__ has lowest pripority
+
+# 1) __getattribute__ gets called all the times whether there is the attribute or not
+# 2) It is invoked first(highest priority)
+# 3) So, even if there is the attribute in the instance, python calls __getattribute__ first
+#    with the attribute as an argument
+
+
+# getattr() has 2 or 3 parameters
+# getattr(myobj,myattribute) is same as myobj.getattribute(myattribute)
+# The 3rd argument is default attribute
+
+class A:
+
+    def __getattr__(self, name):
+
+        return ('hahahaha'+name)
+
+
+a = A()
+a.ace = 'ace value'
+
+print(a.ace)
+print(a.ace2)
+print(a.__dict__)
+
+# python could find 'ace' , so prints the value of 'ace'
+# But, 'ace2' cannot be found, so __getattr_ is invoked.
+# If we print a.__dict__ , we can see the attribute 'ace' with value of it
+
+# What if we add __getattribute__ to class 'A'
+
+
+class A1:
+
+    def __getattr__(self, name1):
+
+        return ('hahahaha'+name1)
+
+    def __getattribute__(self, name2):
+
+        return ('holaaaaaa'+name2)
+
+
+a1 = A1()
+a1.ace1 = 'ace value1'
+
+print(a1.ace1)
+print(a1.ace2_2)
+print(a1.__dict__)
+
+# 1) Even though we assigned a value 'ace value1' to the attribute 'ace1'
+# __getattribute__ is invoked first . Python doesn't even try to find 'ace1'
+# 2) 'ace2_2' does not exist .So, __getattribute__ is called here not __getattr__
+# 3) If we see the output of a1.__dict__, we can again conclude that __getattribute__ is invoked
+# 'first', the highest priority
+
+# In short,
+# __getattribute__ gets called "first"(the highest priority),whether or not there is the attribute
+# __getattr__ gets called "last"(the lowest priority), if python cannot find the attribute
+
+# __getattr__(self,name) is invoked by self.name if name does not exist
+# __setattr__(self,name,value) is invoked by self.name = value
+# __delattr__(self,name) is invoked by del self.name
+# __getattribute__(self,name) is invoked by self.name ,if name exists.
