@@ -527,3 +527,102 @@ print("*************************************************************************
 # derived classes uses __get__, __set__ and __del__ that are defined in the base class(descriptor) to achieve property in python.
 # To understand above line, see line 295 . That's how property in python works internally.
 # Descriptors are the ones used to create a property by python internally.
+
+print("**********************************************************************************")
+
+# classes vs descriptors
+
+class Apple:
+
+    def __getattr__(self, item):
+
+        return self.__dict__[item]
+
+    def __setattr__(self, key, value):
+
+        self.__dict__[key] = value
+
+    def __delattr__(self, item):
+
+        del self.__dict__[item]
+
+
+apple = Apple()
+apple.name = 'simla apple'
+apple.color = 'red'
+print(apple.name)
+print(apple.color)
+
+del apple.name
+
+print(vars(apple)) # Notice that 'name' got deleted from the object's variable
+
+
+# Classes implement __getattr__,__setattr__ and __delattr__
+
+
+# Descriptors
+
+
+class Descriptor:
+
+    def __init__(self):
+        self.__fuel_cap = 0
+
+    def __get__(self, instance, owner):
+        return self.__fuel_cap
+
+    def __set__(self, instance, value):
+        if isinstance(value, int):
+            print(value)
+        else:
+            raise TypeError("Fuel Capacity can only be an integer")
+
+        if value < 0:
+            raise ValueError("Fuel Capacity can never be less than zero")
+
+        self.__fuel_cap = value
+
+    def __delete__(self, instance):
+        del self.__fuel_cap
+
+
+class Car:
+    fuel_cap = Descriptor()
+    def __init__(self,make,model,fuel_cap):
+        self.make = make
+        self.model = model
+        self.fuel_cap = fuel_cap
+
+    def __str__(self):
+        return "{0} model {1} with a fuel capacity of {2} ltr.".format(self.make,self.model,self.fuel_cap)
+
+
+car2 = Car("BMW","X7",40)
+print(car2)
+
+'''
+The __init__() method of the Descriptor class has a local variable __fuel_cap to zero. 
+The dunder or a double underscore at the beginning of it means that the variable is private. 
+Having a dunder, in the beginning, is only to distinguish the fuel capacity attribute of 
+Descriptor class with the Car class.
+As you know by now, the __get__() method is used to retrieve the attributes, 
+and it returns the variable fuel capacity. 
+It takes three arguments the descriptor object, instance of the class that contains the descriptor 
+object instance, i.e., car2 and finally the owner, which is the class to which the instance belongs, 
+i.e., the Car class. In this method, you simply return the value attribute, i.e., 
+the fuel_cap whose value is set in the __set__() method.
+The __set__() method is invoked when the value is set to the attribute, 
+and unlike the __get__() method, it returns nothing. It has two arguments apart from the 
+descriptor object itself, i.e., the instance which is the same as the __get__() method and the 
+value argument, which is the value you assign to the attribute. 
+In this method, you check whether the value you would like to assign to the fuel_cap attribute 
+is an integer or not. If not, you raise a TypeError exception. 
+Then, in the same method, you also check whether the value is less than zero if it is 
+then you raise another exception but this time a ValueError exception. 
+After checking for errors, you update the fuel_cap attribute equal to the value.
+Finally, the __delete__() method, which is called when the attribute is deleted 
+from an object and similar to the __set__() method, it returns nothing.
+'''
+# Descriptors is the concept behind the python property
+
