@@ -562,7 +562,11 @@ print(vars(apple)) # Notice that 'name' got deleted from the object's variable
 
 
 # Descriptors
-
+# Descriptors are implemented using  __get__,__set__ and __delete__ in one class.And this class is used
+# by it's derived class to use this class as @property methods.
+# Descriptors are the concept behind @property,@classmethod and @staticmethod decorators.
+# With out descriptors there is no concept called property in python.
+# As properties are implemented internally using descriptors.
 
 class Descriptor:
 
