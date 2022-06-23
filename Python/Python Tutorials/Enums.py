@@ -108,7 +108,7 @@ print("*************************************************************************
 
 # Can enum variables be duplicates ?
 # enum member names should be unique, if not python raises TypeError
-# enum memner values can be same, python won't raise any error, but while printing
+# enum members values can be same, python won't raise any error, but while printing
 # using for loop it takes first appearance members only , Look below
 
 
