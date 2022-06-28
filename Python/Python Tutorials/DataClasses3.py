@@ -19,7 +19,7 @@
 
 3) If init = True, then the variable with the field init = True will be initialized by the internal default init
    If init = False, then the variable is not initialized by the internal init. so we need to initialize on our
-   own. One way is to use default field when init = Flase in any of the variable.
+   own. One way is to use default field when init = False in any of the variable.
    By default, init = True for all variables inside a dataclass
 
 4) If repr = True ,then the variable is used in the internal default __repr__
