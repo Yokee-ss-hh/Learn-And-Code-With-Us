@@ -85,6 +85,9 @@ print(list_slice[1:6:1])
 print(list_slice[-3:-6:-1])
 print(list_slice[::2])
 print(list_slice[::-2])
+print([1,2,3,4,5,6,7,8][0::9])
+# After slicing if output is a single element, then also we will get a list
+# output : [1]
 
 
 print("***********************************************************")
