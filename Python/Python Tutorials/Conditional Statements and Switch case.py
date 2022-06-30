@@ -59,6 +59,16 @@ print('accepted' if minimum_age > 20 else 'its ok' if minimum_age == 18 else 'no
 # Python raises error to write else statement if we do so.
 
 
+'''
+if expression1:
+   statement1
+elif expression2:
+   statement2
+else:
+   statement3
+   
+statement1 if expression1 else (statement2 if expression2 else statement3)
+'''
 
 
 
