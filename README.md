@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, We are Yokesh & Vineeth</h1>
 <h3 align="center">A passionate Backend and Automation developers from India</h3>
-<h4 style="color:blue;">As of now this repo has 64 python files, each file resembling each topic in python with almost 14,000+ lines of code</h4>
-<h4 style="color:red;"> Why this Repository ?</h4>
+<h4 style="color:blue;">***As of now this repo has 64 python files, each file resembling each topic in python with almost 14,000+ lines of code***</h4>
+<h4 style="color:red;"> WHY this Repository ?</h4>
 <h5 style="color:green;"> The main objective of this repo is to learn python by copying this code and paste in your IDE and learn from the outputs!</h5>
 <h4 style="color:green;">How to use this Repository ?</h4>
 <h5 style="color:green;">1)Open PythonTutorials Folder</h5>
