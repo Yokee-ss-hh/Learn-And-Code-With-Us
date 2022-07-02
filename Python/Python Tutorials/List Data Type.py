@@ -428,3 +428,16 @@ for item in my_list:
 '''
 
 # The above program if un-commented runs infinitely.
+
+
+print("***************************************************************************")
+
+h1 , h2 = 12, 20
+
+print(h1,h2)
+
+h3,h4 = [10,20]
+
+print(h3,h4)
+
+# Here Unpacking of list happened implicitly
