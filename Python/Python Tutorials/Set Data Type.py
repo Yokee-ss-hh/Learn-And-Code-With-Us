@@ -150,6 +150,14 @@ print(u4)
 print(u5)
 print(u6)
 
+x = {"a", "b", "c"}
+y = {"f", "d", "a"}
+z = {"c", "d", "e"}
+
+result = x.union(y, z)
+
+print(result)
+
 print("***update(), |= operator")
 # 1) update() and |= adds set2 elements to set1.
 
