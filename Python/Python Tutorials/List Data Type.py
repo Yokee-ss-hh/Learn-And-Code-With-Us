@@ -441,3 +441,15 @@ h3,h4 = [10,20]
 print(h3,h4)
 
 # Here Unpacking of list happened implicitly
+
+print("***************************************************************************")
+
+mem1 = [[1,2]] * 2
+
+mem1[1][0] = 3
+
+print(mem1)
+
+# This happened because * uses existing [1,2] to create another duplicate of [1,2]
+# so both elements after * operation will be having same memory location
+# That's why changing one item in one element will reflect in all replicas.
