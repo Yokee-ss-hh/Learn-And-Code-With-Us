@@ -673,3 +673,9 @@ print("".join({'a':1,'b':2,'c':3}))
 print("".join({'a':'1','b':'2','c':'3'}.values()))
 print("".join({'a':1,'b':2,'c':3}.keys()))
 
+print("***************************************************************************************")
+
+
+print(max('yokesh'))
+print(min('yokesh'))
+print(max("Hello dear how are you"))
