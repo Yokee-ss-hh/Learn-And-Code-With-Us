@@ -284,6 +284,23 @@ setattr(cookie1,'ingredients','eatable things')
 
 print("After Content Change : ",cookie1.shape,cookie1.ingredients)
 
+print("***************************************************************************************")
+# self is optional name for the first parameter in __init__ and instance methods
+
+
+class OPT:
+
+    def __init__(alias,a):
+
+        alias.a = a
+
+    def some_method_of_OPT(alias1):
+
+       print(alias1.a)
+
+opt = OPT(20)
+print(opt.a)
+opt.some_method_of_OPT()
 
 print("***************************************************************************************")
 print("***** Destructor() *****")
